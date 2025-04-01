@@ -17,5 +17,3 @@ class Kubehcl < Formula
       system "#{bin}/kubehcl", "license"
     end
   end
-
-  brew tap yanir75/homebrew-apps https://github.com/yanir75/homebrew-apps
