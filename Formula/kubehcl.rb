@@ -1,16 +1,14 @@
 class Kubehcl < Formula
     desc "kubehcl allows deployment to kubernetes using hcl configuration language"
-    homepage "https://github.com/yanir75/kubehcl" # Your app's homepage URL
-    url "https://github.com/yanir75/kubehcl/archive/refs/tags/v0.1.0.zip" # The URL of your tarball or zip file
-    sha256 "d61874663de9c5793269f63626129fd57a249f24d661df428c301b582d6bca8c" # SHA256 checksum of the tarball
+    homepage "https://github.com/yanir75/kubehcl"
+    url "https://github.com/yanir75/kubehcl/releases/download/v0.1.1/kubehcl.tar.gz", using: :curl
+    sha256 "c43d90b4dc5d87963e7bed77a70fb42f95751d27a8e5b6a6dbbdf9cba059dbe7" # SHA256 checksum of the tarball
   
     # If your app has dependencies, you can add them like this:
     # depends_on "dependency-name"
-  
-    depends_on "go" => :build
-    
+      
     def install
-      system "go", "build", "-o", bin/"kubehcl"
+      bin.install
     end
   
     test do
