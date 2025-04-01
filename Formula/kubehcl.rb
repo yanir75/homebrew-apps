@@ -7,11 +7,9 @@ class Kubehcl < Formula
     # If your app has dependencies, you can add them like this:
     # depends_on "dependency-name"
   
-
+    depends_on "go" => :build
+    
     def install
-      unless which("go")
-        odie "Go is required to build this formula, but it is not installed."
-      end
       system "go", "build", "-o", bin/"kubehcl"
     end
   
