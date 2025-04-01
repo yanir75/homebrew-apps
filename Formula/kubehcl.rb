@@ -8,7 +8,7 @@ class Kubehcl < Formula
     # depends_on "dependency-name"
       
     def install
-      bin.install
+      bin.install "kubehcl"
     end
   
     test do
