@@ -7,7 +7,7 @@ class Kubehcl < Formula
     # If your app has dependencies, you can add them like this:
     # depends_on "dependency-name"
   
-    depends_on "go@1.24.1" => :build
+    depends_on "go@1.24" => :build
 
     def install
       system "go", "build", "-o", bin/"kubehcl"
