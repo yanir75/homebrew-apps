@@ -1,4 +1,4 @@
-class kubehcl < Formula
+class Kubehcl < Formula
     desc "kubehcl allows deployment to kubernetes using hcl configuration language"
     homepage "https://github.com/yanir75/kubehcl" # Your app's homepage URL
     url "https://github.com/yanir75/kubehcl/archive/refs/tags/v0.1.0.zip" # The URL of your tarball or zip file
