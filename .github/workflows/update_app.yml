@@ -7,15 +7,34 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.client_payload.sha }}
       
-      - name: Print asset
-        run: echo ${{ github.event.client_payload.asset }}
+      # - name: Print asset
+      #   run: echo ${{ github.event.client_payload.asset }}
 
-      - name: Print tag
-        run: echo ${{ github.event.client_payload.version }}
+      # - name: Print tag
+      #   run: echo ${{ github.event.client_payload.version }}
+      - name: Create Formula
+        run: |
+          envsubst < template > out.txt && mv out.txt Formula/kubehcl.rb
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add Formula
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Added formula for kubehcl"
+          git remote set-url origin https://yanir75:${{ secrets.PAT }}@github.com/${{ github.repository }}
+          git push origin main
+        env:
+          sha: ${{ github.event.client_payload.sha }}
+          tag: ${{ github.event.client_payload.version }}
+
+        
