@@ -2,7 +2,7 @@ class Kubehcl < Formula
     desc "kubehcl allows deployment to kubernetes using hcl configuration language"
     homepage "https://github.com/yanir75/kubehcl"
     url "https://github.com/yanir75/kubehcl/releases/download/${tag}/kubehcl.tar.gz", using: :curl
-    sha256 "${sha}" # SHA256 checksum of the tarball
+    sha256 "${kubehclsha}" # SHA256 checksum of the tarball
   
     # If your app has dependencies, you can add them like this:
     # depends_on "dependency-name"

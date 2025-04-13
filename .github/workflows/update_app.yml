@@ -34,7 +34,7 @@ jobs:
           git remote set-url origin https://yanir75:${{ secrets.PAT }}@github.com/${{ github.repository }}
           git push origin main
         env:
-          sha: ${{ github.event.client_payload.sha }}
+          sha: ${{ github.event.client_payload.kubehclsha }}
           tag: ${{ github.event.client_payload.version }}
 
         
