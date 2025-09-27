@@ -14,22 +14,22 @@ cask "kubehcl" do
   on_macos do
     on_intel do
       url "https://github.com/yanir75/kubehcl/releases/download/v#{version}/kubehcl_#{version}_darwin_amd64.tar.gz"
-      sha256 "3c0da8485a62c74f7f0e6f985ecf7fdb7834c4ea3e4b9798d65c0953506a20d8"
+      sha256 "56589c4c268a90423ada0346c9c4c3df2c0917bf29effdb787a15282f15495cf"
     end
     on_arm do
       url "https://github.com/yanir75/kubehcl/releases/download/v#{version}/kubehcl_#{version}_darwin_arm64.tar.gz"
-      sha256 "74559fe89705e57c8eb5a1fae766c52e5b0ba6930d60fdcce718683cce7cc103"
+      sha256 "3a29374bc3a0bfe5017492775be5672105ee28f7a5847779b2dbcfddfeeab1db"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/yanir75/kubehcl/releases/download/v#{version}/kubehcl_#{version}_linux_amd64.tar.gz"
-      sha256 "257167e2b6a1a6e1bbf19a720f77424e90bee0e5cd73a086f7b8961563a20b7a"
+      sha256 "1839f036e9f4a4360f571fe9ad4a09c9051c2be10b35ebb091ee89686204e6dc"
     end
     on_arm do
       url "https://github.com/yanir75/kubehcl/releases/download/v#{version}/kubehcl_#{version}_linux_arm64.tar.gz"
-      sha256 "711cd4a25b0e7c7a084d9266bde33306c2e913e50e7cea270bb81a897fe89d33"
+      sha256 "e615a8b12c4ae24bea22a76a086f37b59851b30e321109b58c4424e9e3c63238"
     end
   end
 
