@@ -3,7 +3,7 @@ cask "kubehcl" do
   name "kubehcl"
   desc ""
   homepage ""
-  version "0.2.5"
+  version "0.2.6"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "kubehcl" do
   on_macos do
     on_intel do
       url "https://github.com/yanir75/kubehcl/releases/download/v#{version}/kubehcl_#{version}_darwin_amd64.tar.gz"
-      sha256 "56589c4c268a90423ada0346c9c4c3df2c0917bf29effdb787a15282f15495cf"
+      sha256 "dda990e077804da76a4091d5b263ab9391da4decc4e1317dd654ed9d85b3f095"
     end
     on_arm do
       url "https://github.com/yanir75/kubehcl/releases/download/v#{version}/kubehcl_#{version}_darwin_arm64.tar.gz"
-      sha256 "3a29374bc3a0bfe5017492775be5672105ee28f7a5847779b2dbcfddfeeab1db"
+      sha256 "cacf2b6c08097e9a10ab8d881e416f1a2e1a536a6e77c7af6e9309fc6c4f838c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/yanir75/kubehcl/releases/download/v#{version}/kubehcl_#{version}_linux_amd64.tar.gz"
-      sha256 "1839f036e9f4a4360f571fe9ad4a09c9051c2be10b35ebb091ee89686204e6dc"
+      sha256 "b16de6a69a205f638e9ecc0260e738249ad88c2cd021113a49c6414bc1f1b31c"
     end
     on_arm do
       url "https://github.com/yanir75/kubehcl/releases/download/v#{version}/kubehcl_#{version}_linux_arm64.tar.gz"
-      sha256 "e615a8b12c4ae24bea22a76a086f37b59851b30e321109b58c4424e9e3c63238"
+      sha256 "a0d6d3ad7b47ab3b717027a4e41408fb696c710f76386da6d8291c2a8785eeb0"
     end
   end
 
